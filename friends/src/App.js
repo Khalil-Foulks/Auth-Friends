@@ -17,11 +17,11 @@ function App() {
             <Link to="/login">Login</Link>
           </li>
           <li>
-            <Link to="/protected">Protected Page</Link>
+            <Link to="/dashboard">Dashboard Page</Link>
           </li>
         </ul>
         <Switch>
-          <PrivateRoute exact path="/protected" component={Dashboard}/>
+          <PrivateRoute exact path="/dashboard" component={Dashboard}/>
           <Route path="/login" component={Login}/> {" "}
           <Route component={Login}/>
         </Switch>
