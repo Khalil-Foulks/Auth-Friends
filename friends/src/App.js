@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
 import LoginForm from './components/LoginForm'
 import Login from './components/Login'
+import Dashboard from './components/Dashboard'
+import PrivateRoute from './components/PrivateRoute'
 
 import './App.css';
 
@@ -19,6 +21,7 @@ function App() {
           </li>
         </ul>
         <Switch>
+          <PrivateRoute exact path="/protected" component={Dashboard}/>
           <Route path="/login" component={Login}/> {" "}
           <Route component={Login}/>
         </Switch>
