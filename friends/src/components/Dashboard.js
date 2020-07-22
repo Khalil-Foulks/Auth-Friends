@@ -8,12 +8,12 @@ export default function Dashboard() {
         <Router>
             <div>
                 <Switch>
-                <Route exact path="/dashboard">
+                <PrivateRoute exact path="/dashboard">
                     <img src="https://media.giphy.com/media/BoBOKNtlR8rTi/source.gif" alt="it's working"/>
                     <button>
                         <Link to ="dashboard/friends">List of Friends</Link>
                 </button>
-                </Route>
+                </PrivateRoute>
                     <PrivateRoute exact path="/dashboard/friends">
                         <Friends/>
                     </PrivateRoute>

@@ -8,7 +8,7 @@ export default function FriendCard(props){
 	}
 
     return (
-            <div key ={friend.id} className={friend.name}>
+            <div key ={friend.id} className={`friend ${friend.name}`}>
                 <p>{friend.name}</p>
                 <p>{friend.age}</p>
                 <p>{friend.email}</p>
