@@ -1,0 +1,27 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
+import Friends from './Friends'
+
+export default function Dashboard() {
+    return (
+        <Router>
+            <div>
+                <Switch>
+                <PrivateRoute exact path="/dashboard">
+                    <div>
+                        <img src="https://media.giphy.com/media/BoBOKNtlR8rTi/source.gif" alt="it's working"/>
+                    </div>
+                    <button>
+                        <Link to ="dashboard/friends">List of Friends</Link>
+                    </button>
+                </PrivateRoute>
+                    <PrivateRoute exact path="/dashboard/friends">
+                        <Friends/>
+                    </PrivateRoute>
+                </Switch>
+            </div>
+
+        </Router>
+    )
+}
