@@ -9,10 +9,12 @@ export default function Dashboard() {
             <div>
                 <Switch>
                 <PrivateRoute exact path="/dashboard">
-                    <img src="https://media.giphy.com/media/BoBOKNtlR8rTi/source.gif" alt="it's working"/>
+                    <div>
+                        <img src="https://media.giphy.com/media/BoBOKNtlR8rTi/source.gif" alt="it's working"/>
+                    </div>
                     <button>
                         <Link to ="dashboard/friends">List of Friends</Link>
-                </button>
+                    </button>
                 </PrivateRoute>
                     <PrivateRoute exact path="/dashboard/friends">
                         <Friends/>

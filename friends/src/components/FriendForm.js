@@ -21,9 +21,9 @@ class FriendForm extends React.Component {
             .post("api/friends", this.state.friend)
             .then(res => {
                 console.log("posted new friend")
-                this.setState({
-                    friend:[...this.state.friend, res.data]
-                })
+                this.setState(
+                   res.data
+                )
             })
             .catch(err => console.log(err));
     }
