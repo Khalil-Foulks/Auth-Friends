@@ -12,12 +12,37 @@ code {
     monospace;
 }
 
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 li{
   list-style-type: none;
+  margin: 10px;
+  background-color: dodgerblue;
+  padding: 10px;
+  width: 150px;
+  border-radius: 3%;
+}
+
+li a{
+  color:whitesmoke;
+  text-decoration: none;
+  text-align: center;
 }
 
 .friend {
   width:70%;
   margin: 20px 0px 20px 180px;
   border: 1px solid black;
+}
+
+button a{
+  text-decoration: none;
+}
+
+input{
+  margin: 15px;
 }
